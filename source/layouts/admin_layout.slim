@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    = partial 'layouts/meta'
+
+    = stylesheet_link_tag "all"
+  body
+    .global-wrap
+      = partial 'partials/shared/header-primary'
+
+      main.main-content
+        = yield
+      = partial 'partials/shared/footer'
+
+      = javascript_include_tag 'main', async: true
