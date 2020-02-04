@@ -8,36 +8,66 @@ public_folder: /images/uploads
 
 collections:
   #yaml middleman data example
+  - name: course
+    label: Kurse
+    format: yml
+    extension: yml
+    folder: data/courses/
+    create: true
+    slug: "{{date}}-{{title}}"
+    fields:
+      - { label: Titel, name: title, widget: string, required: true }
+      - { label: Kursstart, name: starts_at, widget: date }
+      - { label: Tag, name: day, widget: string, required: true }
+      - { label: Zeit, name: time, widget: string, required: true }
+      - { label: Kursdauer, name: duration, widget: string, required: true }
+      - { label: Termine, name: dates, widget: number }
+      - { label: Kursort, name: location, widget: string, required: true }
+      - { label: Body, name: body, widget: markdown, required: true }
+
   - name: product
     label: Product
     format: yml
     extension: yml
     folder: data/products/
     create: true
-    slug: '{{title}}'
+    slug: "{{title}}"
     fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Publish Date, name: date, widget: datetime}
-      - {label: Image, name: image, widget: image, required: true}
+      - { label: Title, name: title, widget: string, required: true }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Image, name: image, widget: image, required: true }
 
-      - {label: Weight, name: weight, widget: number}
-      - {label: Price, name: price, widget: number}
-      - {label: Body, name: body, widget: markdown}
+      - { label: Weight, name: weight, widget: number }
+      - { label: Price, name: price, widget: number }
+      - { label: Body, name: body, widget: markdown }
 
-#markdown middleman blog example
+  - name: people
+    label: Personen
+    format: yml
+    extension: yml
+    folder: data/people/
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: Name, name: name, widget: string, required: true }
+      - { label: Job, name: job, widget: string }
+      - { label: Image, name: image, widget: image, required: true }
+      - { label: Body, name: body, widget: markdown }
+
+  #markdown middleman blog example
   - name: blog
     label: Blog
     folder: source/posts/
     extension: .html.md
     format: frontmatter
     create: true
-    slug: '{{title}}'
+    slug: "{{title}}"
     fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Publish Date, name: date, widget: datetime}
-      - {label: Description, name: description, widget: string}
-      - {label: Image, name: image, widget: image}
-      - {label: Body, name: body, widget: markdown}
+      - { label: Title, name: title, widget: string, required: true }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Description, name: description, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Body, name: body, widget: markdown }
 
   - name: pages
     label: Pages
@@ -50,8 +80,18 @@ collections:
             name: hero
             widget: object
             fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Image, name: image, widget: image}
+              - { label: Title, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+          - label: Story
+            name: story
+            widget: markdown
+      - file: "data/pages/zouk.yml"
+        labe: Was ist Zouk?
+        name: zouk
+        fields:
+          - label: Titel
+            name: title
+            widget: string
           - label: Story
             name: story
             widget: markdown
@@ -67,20 +107,14 @@ collections:
             name: nav_items
             widget: list
             fields:
-              - {label: Label, name: label, widget: string}
-              - {label: Path, name: path, widget: string}
-      - file: data/settings/units.yml
-        label: Units
-        name: units
+              - { label: Label, name: label, widget: string }
+              - { label: Path, name: path, widget: string }
+      - file: data/settings/locations.yml
+        label: Ort
+        name: location
         fields:
-          - label: Currency
-            name: currency
-            widget: select
-            options: ['€', '$', '£']
-            default: '€'
-
-          - label: Weight
-            name: weight
-            widget: select
-            options: ['kg', ' st', ' lb']
-            default: 'kg'
+          - label: Orte
+            name: locations
+            widget: list
+            fields:
+              - { label: Addresse, name: address, widget: string }

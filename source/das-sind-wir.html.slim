@@ -1,0 +1,27 @@
+---
+title: Das sind wir - ZoukHH.de
+intro: Zouk in Hamburg ist nur möglich mit euch und der tatkräftigen Mithilfe von einigen speziellen Leuten.
+---
+
+section.hero style=background_image(image_path("/images/we-hero.jpg"))
+  .caption
+    .row
+
+.skew-box
+  section.homepage-story
+    .skew-box-inner
+      .container
+        .row
+          .story-content
+            = markdown current_page.data.intro
+
+section.courses
+  .container
+    .row
+      h1.person-short-header Dies sind die Köpfe hinter ZoukHH.de
+
+    .person-short-list
+      - data.people.sort_by{|_filename, person| person.order}.each do |filename, person|
+        a.person-short[href=filename]
+          span.name= person.name
+          img[src=person.image]

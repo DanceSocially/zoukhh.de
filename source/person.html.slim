@@ -1,0 +1,16 @@
+section.courses
+  .container
+    .row
+      .content
+        .person-detail
+          .image style=background_image(image_path(person.image))
+
+          .content
+            .meta
+              h1 = person.name
+
+              - if person.job.present?
+                .person-detail__job = person.job
+
+            .body
+              = markdown person.body

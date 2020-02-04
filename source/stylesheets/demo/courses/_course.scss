@@ -1,0 +1,31 @@
+.course-detail {
+  margin-bottom: 5rem;
+
+  .day-time {
+    display: inline-flex;
+    width: 5rem;
+    margin-right: 1rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    > h1 {
+      margin: 0;
+      line-height: 62px;
+    }
+  }
+}
+
+.course-detail__time,
+.course-detail__starts_at {
+  display: inline-block;
+  opacity: 0.7;
+}
+.course-detail__starts_at::before {
+  content: "–";
+  margin: 0 1rem;
+}

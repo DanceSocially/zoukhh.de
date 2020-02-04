@@ -1,0 +1,22 @@
+.course-detail
+  article.content
+    .meta
+      a id="#{course.day}-#{course.time}"
+      header name="#{course.day}-#{course.time}"
+        .day-time
+          span.day = course.day.slice(0,2)
+          span.time = course.time
+
+        h1 = course.title
+
+      .course-detail__time
+        = "#{course.day} um #{course.time} Uhr"
+
+      - if course.starts_at.present?
+        - if course.starts_at > Time.now
+          .course-detail__starts_at = "Beginnt am #{course.starts_at.strftime('%d.%m.%Y')}"
+        - else
+          .course-detail__starts_at = "Begann am #{course.starts_at.strftime('%d.%m.%Y')}"
+
+    .body
+      = markdown course.body

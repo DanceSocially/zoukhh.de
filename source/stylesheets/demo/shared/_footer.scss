@@ -1,6 +1,8 @@
 footer {
   position: relative;
-  background-color: $text-color;
+  background-color: $background-footer-color;
+  border-top: 1px solid lighten($secondary-color, 50%);
+  margin-top: 5rem;
 
   .header-primary {
     position: relative;
@@ -19,36 +21,59 @@ footer {
     padding: 30px 15px 60px;
   }
 
-  .newsletter {
+  .footer-row {
+    display: flex;
+  }
+
+  .links {
     @extend %column;
-    @extend %col-md-6;
-    @extend %col-sm-8;
+    @extend %col-sm-10;
+    @extend %col-xs-8;
+
+    // font-size: 1.2rem;
+    text-align: center;
+    list-style-type: none;
+
+    @media (min-width: $screen-sm-min) {
+
+      > li {
+        display: inline-block;
+
+        &::after {
+          content: ' · ';
+          display: inline-block;
+          margin: 0 1rem;
+        }
+        &:last-child::after {
+          content: ''
+        }
+      }
+    }
   }
 
   .social {
     @extend %column;
-    @extend %col-md-6;
+    @extend %col-sm-2;
+    @extend %col-xs-4;
     @include clearfix;
-    margin-top: 40px;
+
     .icons {
-      float: right;
+      text-align: right;
     }
     a {
       display: inline-block;
       text-align: right;
       margin-left: 15px;
-      width: 60px; 
+      width: 60px;
       height: 60px;
       padding: 15px;
       background-color: #fff;
-      border-radius: 50%
-
+      border-radius: 50%;
     }
     img {
       width: 100%;
     }
   }
-
 
   label {
     display: block;
@@ -56,15 +81,15 @@ footer {
     font-size: 18px;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
-    
   }
-  button, input {
+  button,
+  input {
     display: inline-block;
     height: 60px;
     padding: 15px;
     border: none;
     font-size: 18px;
-    line-height: 1.5
+    line-height: 1.5;
   }
   input {
     width: 80%;
@@ -82,12 +107,11 @@ footer {
   }
 }
 
-  
 @media screen and (max-width: $screen-xs-max) {
   footer {
     .header-primary {
-      .logo  a {
-        padding-left: 15px
+      .logo a {
+        padding-left: 15px;
       }
       .nav-button {
         display: none;
@@ -96,7 +120,6 @@ footer {
         display: block;
         position: relative;
         top: auto;
-        border-top: 2px solid rgba(255, 255, 255, 0.1);
         li {
           margin: 15px 0;
         }
@@ -110,17 +133,13 @@ footer {
     }
     button {
       width: 40%;
-    } 
+    }
 
     .footer-content {
       padding: 15px 0 30px;
     }
 
     .social {
-      margin-top: 30px;
-      .icons {
-        float: none;
-      }
       a {
         margin-left: 0;
         margin-right: 15px;

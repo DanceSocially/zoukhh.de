@@ -1,10 +1,10 @@
-.product-detail{
+.person-detail {
   position: relative;
   padding-top: 80px;
   width: calc(100vw - (100vw - 100%));
   height: calc(100vh - 80px);
 
-  .image{
+  .image {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -13,7 +13,7 @@
     background-color: $background-secondary-color;
     background-size: contain;
     background-position: center center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
   }
 
   .content {
@@ -24,7 +24,8 @@
     left: 50%;
   }
 
-  .meta, .body {
+  .meta,
+  .body {
     padding: 60px;
   }
 
@@ -36,13 +37,14 @@
   }
   .meta {
     background-color: $background-primary-color;
-    
+
     h1 {
       margin-top: 0;
     }
   }
 
-  .price, .weight {
+  .price,
+  .weight {
     display: inline-block;
     font-weight: bold;
     font-size: 24px;
@@ -53,7 +55,7 @@
     color: $primary-color;
   }
 
-  @media screen and (max-width: $screen-md-max){
+  @media screen and (max-width: $screen-md-max) {
     .image {
       width: 40%;
     }
@@ -64,7 +66,7 @@
     }
   }
 
-  @media screen and (max-width: $screen-sm-max){
+  @media screen and (max-width: $screen-sm-max) {
     width: 100%;
     height: auto;
     padding: 0;
@@ -82,8 +84,9 @@
       left: auto;
     }
   }
-  @media screen and (max-width: $screen-sm-max){
-    .meta, .body {
+  @media screen and (max-width: $screen-sm-max) {
+    .meta,
+    .body {
       padding: 15px;
     }
   }

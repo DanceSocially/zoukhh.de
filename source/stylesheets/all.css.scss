@@ -2,27 +2,51 @@
 @charset 'utf-8';
 
 //bootstrap stuff
-@import 'demo/base/variables';
-@import 'demo/base/mixins';
-@import 'demo/base/normalize';
-@import 'demo/base/scaffolding';
-@import 'demo/base/type';
+@import "demo/base/variables";
+@import "demo/base/mixins";
+@import "demo/base/normalize";
+@import "demo/base/scaffolding";
+@import "demo/base/type";
 
-@import 'demo/base/colors';
-@import 'demo/base/typography';
-@import 'demo/base/grid';
-@import 'demo/base/placeholders';
+@import "demo/base/typography";
+@import "demo/base/grid";
+@import "demo/base/placeholders";
 
-@import 'demo/shared/header-primary';
-@import 'demo/shared/main-content';
-@import 'demo/shared/footer';
+@import "demo/shared/header-primary";
+@import "demo/shared/main-content";
+@import "demo/shared/footer";
 
-@import 'demo/products/products';
-@import 'demo/products/product';
-@import 'demo/products/product-detail';
+@import "demo/courses/courses";
+@import "demo/courses/course";
+@import "demo/courses/course-short";
 
-@import 'demo/news/news';
-@import 'demo/news/news-detail';
+@import "demo/people/person-detail";
+@import "demo/people/person-short";
 
-@import 'demo/homepage/hero';
-@import 'demo/homepage/story';
+@import "demo/news/news";
+@import "demo/news/news-detail";
+
+@import "demo/homepage/hero";
+@import "demo/homepage/story";
+
+@import "demo/faq";
+@import "demo/music";
+
+@media screen and (min-width: $screen-sm-min) {
+  .skew-box {
+    transform-origin: top left;
+    transform: skewY(-2deg);
+
+    & > * {
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .skew-box-inner {
+    transform: skewY(2deg);
+  }
+
+  .header-bg {
+    background: $body-bg;
+  }
+}

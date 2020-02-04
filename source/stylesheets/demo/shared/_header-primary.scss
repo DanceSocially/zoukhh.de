@@ -5,9 +5,13 @@
   top: 0;
   z-index: 999;
 
+  border-bottom: 1px solid $border-color;
+
   .logo {
     width: 173px;
     height: 80px;
+    margin-top: -15px;
+
     a {
       display: block;
       padding: 26px 30px;
@@ -30,15 +34,17 @@
       font-size: 18px;
       font-weight: 700;
       color: $text-color;
-      &.active, &:hover, &:focus{
+      &.active,
+      &:hover,
+      &:focus {
         color: $primary-color;
       }
     }
-    @media screen and (max-width: $screen-xs-max){
+    @media screen and (max-width: $screen-xs-max) {
       display: none;
     }
   }
-  .nav-button{
+  .nav-button {
     display: none;
     position: absolute;
     right: 0;
@@ -67,21 +73,24 @@
   }
   @media screen and (max-width: $screen-xs-max) {
     .navigation {
-      display: none;
+      display: block;
       width: 100%;
-      height: auto;
+      height: calc(100vh - 80px);
+      position: absolute;
       top: 80px;
       right: 0;
-      background: #fff;
+      background: rgba(255,255,255,0.9);
       border-top: 1px solid $background-primary-color;
+      transform: translate3d(100%, 0 , 0);
+      transition: transform 220ms;
+
       li {
         display: block;
         margin: 30px 0;
       }
 
       &.open {
-        height: calc(100vh - 80px);
-        display: block
+        transform: translate3d(0, 0 , 0);
       }
     }
 

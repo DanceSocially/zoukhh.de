@@ -1,0 +1,22 @@
+---
+title: Was ist Zouk - Zouk-HH.de
+---
+
+section.hero style=background_image(image_path(data.pages.zouk.hero.image))
+  .caption
+    .row
+      h1 = data.pages.zouk.title
+
+.skew-box
+  section.homepage-story
+    .skew-box-inner
+      .container
+        .row
+          .story-content
+            = markdown data.pages.zouk.intro
+
+section
+  .container
+    .row
+      .content
+        = markdown data.pages.zouk.story

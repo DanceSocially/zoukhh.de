@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  font-family: $font-family-sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: $text-color;
@@ -10,49 +10,69 @@ p {
   line-height: 28px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.2;
 }
 h1 {
-  font-size: 64px;
-  font-weight: 700;
+  font-family: $font-family-serif;
+  font-size: 4rem;
+  font-weight: normal;
 }
 
-
 h2 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
-@media screen and (max-width: $screen-md-max){
+h2.section-header {
+  text-align: center;
+}
+
+@media screen and (max-width: $screen-md-max) {
   h1 {
-    font-size: 48px;
+    font-size: 3rem;
   }
 }
 
-@media screen and (max-width: $screen-sm-max){
+@media screen and (max-width: $screen-sm-max) {
   h3 {
-    font-size: 18px;
+    font-size: 1.25rem;
   }
 }
 
-@media screen and (max-width: $screen-xs-max){
+@media screen and (max-width: $screen-xs-max) {
   h1 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
 }
 
+a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
+.attribution {
+  font-style: italic;
+  font-size: 0.9em;
+  opacity: 0.9;
+}

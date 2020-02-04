@@ -1,0 +1,41 @@
+.person-short-header {
+  text-align: center;
+}
+
+.person-short-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.person-short {
+  border: 2px solid lighten($secondary-color, 25%);
+  display: inline-flex;
+  flex-direction: column-reverse;
+  margin: 0 2rem 2rem 0;
+  will-change: transform;
+  transition: transform 200ms;
+  transform: translate3d(0,0,0);
+
+  &:hover {
+    transform: rotate(10deg);
+    text-decoration: none;
+  }
+
+  img {
+    flex-grow: 1;
+    display: flex;
+    width: 160px;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .name {
+    background-color: lighten($secondary-color, 25%);
+    text-align: center;
+    color: $text-color-inverse;
+    font-size: 2rem;
+  }
+}

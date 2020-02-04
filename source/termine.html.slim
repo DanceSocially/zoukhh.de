@@ -1,0 +1,51 @@
+---
+title: Zouk-Termine in Hamburg
+intro: Hier erfahrt ihr, wo ihr in Hamburg Zouk erlernen und auch tanzen könnt.
+---
+
+section.hero style=background_image(image_path("/images/dates-hero.jpg"))
+  .caption
+    .row
+      h1.top.right = current_page.data.title
+
+.skew-box
+  section.homepage-story
+    .skew-box-inner
+      .container
+        .row
+          .story-content
+            = markdown current_page.data.intro
+
+section.courses
+  .container
+    .row
+      //product is structured: ['filename', 'data']
+      //sort by newest product
+      - data.courses.each do | course |
+
+        //to get the actual data:
+        = partial 'partials/courses/course', locals: {course: course[1]}
+
+    .row
+      .content
+        h2 Anmeldungen
+        p Anmeldungen nehmen wir gerne unter #{partial('partials/mail_link')} entgegegen. Schreibt uns einfach ob ihr alleine oder mit Partner kommt und wir machen den Rest.
+
+
+section
+  .container
+    .row
+      .story-content
+        h1 Zouk Parties
+
+        p Zouk ist meist anders und so machen auch wir Dinge anders. Unsere Tanz Parties finden meist Sonntags von 18 bis 21 Uhr statt und wir pflegen derzeit ein Rhytmus von ca. alle 3 Wochen. Die genauen Termine pflegen wir auf unserer <a rel="noopener noreferrer nofollow" href="https://www.facebook.com/pg/ZoukHH/events">Facebook Seite</a>.
+
+        p Wem alle drei Wochen nicht ausreicht: Wir fahren auch gern in Grüppchen zu den Zouk Parties in Bremen. Dies organisiert sich organisch in unserer WhatsApp-Gruppe und in unseren Kursen.
+
+section
+  .container
+    .row
+      .story-content
+        h2 Zouk Festivals
+
+        p Wir informieren euch im Kurs über Zouk Festivals oder Kongresse, um euer gelerntes auf einer internationaleren Bühne auszuprobieren und mehr von internationalen Trainern zu lernen. Oder ihr guckt euch selber eines der vielen Möglichkeiten in diesem Google-Kalender heraus: <a rel="noopener noreferrer nofollow" href="https://calendar.google.com/calendar/embed?src=uok2cseo28st26ce2qh0opb5ts@group.calendar.google.com">Zouk Events in Europe</a>.
