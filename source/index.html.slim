@@ -22,12 +22,3 @@ section.homepage-courses.courses
     .course-short-list
       - data.courses.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
-
-section.homepage-news.news
-  .container
-    h2.section-header
-      | News
-    .news-items
-      //get the first two most recent posts
-      - blog.articles.first(2).each do | article |
-        = partial 'partials/news/news_item', locals: {article: article}
