@@ -13,4 +13,17 @@
     element.innerHTML += '@zoukhh.de'
     element.href = 'mailto:' + element.innerHTML
   })
+
+  console.log("does this work?")
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      console.log("and this?", user)
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          console.log("I guess we are ready to go")
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
 })()
