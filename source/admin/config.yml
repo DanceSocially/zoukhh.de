@@ -86,7 +86,7 @@ collections:
             name: story
             widget: markdown
       - file: "data/pages/zouk.yml"
-        labe: Was ist Zouk?
+        label: Was ist Zouk?
         name: zouk
         fields:
           - label: Titel
