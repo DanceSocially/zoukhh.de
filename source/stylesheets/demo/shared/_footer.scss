@@ -25,11 +25,14 @@ footer {
     display: flex;
   }
 
-  .links {
+  .footer-cell {
     @extend %column;
     @extend %col-sm-10;
     @extend %col-xs-8;
+  }
 
+  .nav-links,
+  .links {
     // font-size: 1.2rem;
     text-align: center;
     list-style-type: none;
@@ -47,6 +50,21 @@ footer {
         &:last-child::after {
           content: ''
         }
+      }
+    }
+  }
+
+  .nav-links {
+    > li {
+      display: inline-block;
+
+      &::after {
+        content: ' · ';
+        display: inline-block;
+        margin: 0 1rem;
+      }
+      &:last-child::after {
+        content: ''
       }
     }
   }

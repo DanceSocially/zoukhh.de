@@ -3,11 +3,17 @@ footer
   .footer-content
     .container-fluid
       .row.footer-row
-        ul.links
-          li= "&copy; #{Date.today.year} by ZoukHH.de"
+        div.footer-cell
+          ul.nav-links
+            - data.settings.navigation.nav_items.each do | nav_item |
+              li
+                = nav_link nav_item.label, nav_item.path
 
-          li= link_to 'Impressum', '/impressum/'
-          li= link_to 'Datenschutz', '/datenschutz/'
+          ul.links
+            li= "&copy; #{Date.today.year} by ZoukHH.de"
+
+            li= link_to 'Impressum', '/impressum/'
+            li= link_to 'Datenschutz', '/datenschutz/'
 
 
         .social
