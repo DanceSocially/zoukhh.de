@@ -4,10 +4,10 @@ meta content="ie=edge" http-equiv="x-ua-compatible"
 meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"
 
 // Set dynamic and default meta
-- title = current_page.data.title || "Lerne Brazilian Zouk mit ZoukHH.de"
-- description = current_page.data.description || "Lerne und tanze Brazilian Zouk mit uns bei ZoukHH.de."
+- title = current_page.data.title || "#{@locs[:person].try(:name)} auf ZoukHH.de" || "Lerne Brazilian Zouk mit ZoukHH.de"
+- description = current_page.data.description || @locs[:person].try(:description) || "Lerne und tanze Brazilian Zouk mit uns bei ZoukHH.de."
 //Change this to your domain
-- url = "https://zoukhh.de"
+- url = "https://www.zoukhh.de"
 - image = current_page.data.image || "/images/uploads/homepage-hero.jpg"
 
 title =title

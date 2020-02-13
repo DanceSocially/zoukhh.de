@@ -40,10 +40,13 @@ end
 # proxy people.yml files to person.html
 data.people.each do |_filename, person|
   # people is an array: [filename, {data}]
-  proxy "/das-sind-wir/#{person[:name].parameterize}/index.html", "person.html",
-  locals: {person: person},
-  # layout: 'person-detail',
-  ignore: true
+  proxy(
+    "/das-sind-wir/#{person[:name].parameterize}/index.html",
+    "person.html",
+    locals: {person: person},
+    # layout: 'person-detail',
+    ignore: true
+  )
 end
 
 # Helpers
