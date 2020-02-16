@@ -21,4 +21,4 @@ body: >-
   Wir freuen uns auf euch!
 
   <h2>Anmeldung</h2>
-  Bitte verbindlich per Mail an info@zoukhh.de
+  Bitte verbindlich per Mail an <a class="js-email">info</a>
