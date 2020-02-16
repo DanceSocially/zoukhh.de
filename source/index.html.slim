@@ -23,3 +23,12 @@ section.homepage-courses.courses
     .course-short-list
       - data.courses.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
+
+section.homepage-courses.courses
+  .container
+    h2.section-header
+      | Im Spotlight
+    .course-short-list
+      - data.specials.each do | course |
+        = partial 'partials/courses/course', locals: {course: course[1]}
+

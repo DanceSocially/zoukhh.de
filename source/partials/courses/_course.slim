@@ -9,14 +9,22 @@
 
         h1 = course.title
 
-      .course-detail__time
-        = "#{course.day} um #{course.time} Uhr"
+      - unless course.once_at.present?
+        .course-detail__time
+          = "#{course.day} um #{course.time} Uhr"
 
       - if course.starts_at.present?
         - if course.starts_at > Time.now
           .course-detail__starts_at = "Beginnt am #{course.starts_at.strftime('%d.%m.%Y')}"
         - else
           .course-detail__starts_at = "Begann am #{course.starts_at.strftime('%d.%m.%Y')}"
+      - if course.once_at.present?
+        .course-detail__time
+          = "Einmalig am "
+          = "#{course.once_at.strftime('%d.%m.%Y')} um #{course.time} Uhr"
 
     .body
       = markdown course.body
+
+    - if course.fblink.present?
+      a href=course.fblink rel="noopener noreferrer nofollow" Link zum Facebook-Event
