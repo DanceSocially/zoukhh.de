@@ -47,6 +47,8 @@ GEM
       kramdown (~> 1.2)
       middleman-cli (= 4.3.4)
       middleman-core (= 4.3.4)
+    middleman-alias (0.0.17)
+      middleman-core (>= 3.3)
     middleman-autoprefixer (2.10.1)
       autoprefixer-rails (~> 9.1)
       middleman-core (>= 3.3.3)
@@ -120,6 +122,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman
+  middleman-alias
   middleman-autoprefixer
   middleman-blog
   middleman-livereload
