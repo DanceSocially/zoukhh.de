@@ -29,6 +29,8 @@ page '/*.txt', layout: false
 page '/partials/*', layout: false
 page '/admin/*', layout: false
 
+page '/404.html', directory_index: false # keep 404.html
+
 activate :blog do |blog|
   blog.permalink = 'news/{year}/{title}.html'
   blog.sources = 'posts/{title}.html'
