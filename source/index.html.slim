@@ -21,7 +21,7 @@ section.homepage-courses.courses
     h2.section-header
       | Unsere aktuellen Kurse
     .course-short-list
-      - data.courses.each do | course |
+      - data.courses.sort{ |_, course| course[1].order }.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
 
 - if data.specials.reject{ |name, c| c.hidden }.length > 0

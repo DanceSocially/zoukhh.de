@@ -11,7 +11,10 @@
 
       - unless course.once_at.present?
         .course-detail__time
-          = "#{course.day} um #{course.time} Uhr"
+          - if course.end_time.nil?
+            = "#{course.day} um #{course.time} Uhr"
+          - else
+            = "#{course.day} von #{course.time} bis #{course.end_time} Uhr"
 
       - if course.starts_at.present?
         - if course.starts_at > Time.now

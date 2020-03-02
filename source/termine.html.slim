@@ -23,7 +23,7 @@ section.courses
     .row
       //product is structured: ['filename', 'data']
       //sort by newest product
-      - data.courses.each do | course |
+      - data.courses.sort{ |_, course| course[1].order }.each do | course |
 
         //to get the actual data:
         = partial 'partials/courses/course', locals: {course: course[1]}
