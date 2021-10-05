@@ -31,3 +31,7 @@
 
     - if course.fblink.present?
       a href=course.fblink rel="noopener noreferrer nofollow" Link zum Facebook-Event
+
+    - if course.flyer
+      .flyer
+        img[src=image_path(course.flyer) width=1140]
