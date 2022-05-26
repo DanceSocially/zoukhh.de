@@ -1,10 +1,10 @@
 # Middleman + Netlify CMS Starter
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a6c3d057-a31f-4741-bed1-6d454b6be9ca/deploy-status)](https://app.netlify.com/sites/middleman-netlify-cms/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64095c5e-843a-4126-a711-b717a70e0c23/deploy-status)](https://app.netlify.com/sites/elegant-banach-e0c365/deploys)
 
-This repo contains an **[example website](https://middleman-netlify-cms.netlify.com/)** that is built with [Middleman](https://www.middlemanapp.com/) and [Netlify CMS](https://www.netlifycms.org).
+This repo contains the **[ZoukHH website](https://zoukhh.de)** that is built with [Middleman](https://www.middlemanapp.com/) and [Netlify CMS](https://www.netlifycms.org).
 
-*Designed and developed by [Tom Rutgers](https://www.tomrutgers.nl/)*
+*Designed and developed by [Georg Tavonius](https://github.com/Calamari)*
 
 ## About the architecture
 
@@ -24,11 +24,15 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 
 Be sure to check out the [middleman installation guide](https://middlemanapp.com/basics/install/)
 ```
-$ git clone https://github.com/tomrutgers/middleman-starter-netlify-cms
-$ cd middleman-starter-netlify-cms
+$ git clone https://github.com/DanceSocially/zoukhh.de
+$ cd zoukhh.de
 $ bundle install
 $ middleman server
 ```
+
+### Push to deploy
+
+Deployment will be handled automatically through netlify. Simply push the app to master.
 
 ### Setting up the CMS
 Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
