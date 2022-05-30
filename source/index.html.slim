@@ -19,7 +19,7 @@ section.hero style=background_image(image_path(data.pages.home.hero.image))
 section.homepage-courses.courses
   .container
     h2.section-header
-      | Unsere aktuellen Kurse
+      | Aktuellen Kurse bei Kim und Alina
     .course-short-list
       - data.courses.sort{ |_, course| course[1].order }.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
