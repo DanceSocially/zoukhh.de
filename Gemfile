@@ -5,6 +5,7 @@ gem "middleman-blog"
 gem 'middleman-autoprefixer'
 gem "middleman-livereload"
 gem 'middleman-alias'
+gem "webrick"
 
 gem "slim"
 
