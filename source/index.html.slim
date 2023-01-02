@@ -24,12 +24,12 @@ section.homepage-courses.courses
       - data.courses.sort{ |_, course| course[1].order }.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
 
-- if data.specials.reject{ |name, c| c.hidden }.length > 0
+- if data.spotlight.reject{ |name, c| c.hidden }.length > 0
   section.homepage-courses.courses
     .container
       h2.section-header
         | Im Spotlight
       .course-short-list
-        - data.specials.each do | course |
+        - data.spotlight.each do | course |
           = partial 'partials/courses/course', locals: {course: course[1]} unless course[1].hidden
 

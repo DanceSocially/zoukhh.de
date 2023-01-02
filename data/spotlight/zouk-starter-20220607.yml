@@ -1,7 +1,7 @@
-hidden: false
+hidden: true
 title: Neuer Zouk-Beginnerkurs mit Kim und Alina
 special: true
-once_at: 2022-06-07
+once_at: "2022-06-07"
 day: Di
 time: "19:00"
 duration: "1 Stunde"
