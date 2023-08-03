@@ -24,7 +24,7 @@ section.courses
       h1 Aktuelle Kurse bei Kim und Alina
       //product is structured: ['filename', 'data']
       //sort by newest product
-      - data.courses.sort{ |_, course| course[1].order }.each do | course |
+      - data.courses.filter{|_,course| course.course}.sort{ |_, course| course[1].order }.each do | course |
 
         //to get the actual data:
         = partial 'partials/courses/course', locals: {course: course[1]}
@@ -33,6 +33,18 @@ section.courses
       .content
         h2 Anmeldungen
         p Anmeldungen nehmen wir gerne unter #{partial('partials/mail_link')} entgegegen. Schreibt uns einfach ob ihr alleine oder mit Partner kommt und wir machen den Rest.
+
+
+section.courses
+  .container
+    .row
+      h1 Zusätzliche Angebote
+      //product is structured: ['filename', 'data']
+      //sort by newest product
+      - data.courses.reject{|_,course| course.course}.sort{ |_, course| course[1].order }.each do | course |
+
+        //to get the actual data:
+        = partial 'partials/courses/course', locals: {course: course[1]}
 
 
 section

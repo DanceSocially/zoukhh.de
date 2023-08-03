@@ -4,6 +4,7 @@ time: "18:00"
 end_time: "20:00"
 location: "Wandsbeker Chaussee 62A"
 order: 3
+course: false
 body: >-
   Zusätzlich zu unseren Kursen bieten wir der Zouk Community Donnerstags eine Gelegenheit um gelerntes in entspannter
   Atmosphäre mit anderen zu üben und zu vertiefen.

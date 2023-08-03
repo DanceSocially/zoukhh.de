@@ -4,6 +4,7 @@ time: "20:00"
 end_time: "22:00"
 location: "Wandsbeker Chaussee 62A"
 order: 2
+course: true
 body: >-
   Der Mittelstufen-Kurs findet immer Dienstags um 20:00-22:00 Uhr in der Wandsbeker Chaussee 62a statt (Nähe U-Bahn Station Wartenau).<br>
   Er beginnt immer mit einem 20 minütigem Aufwärm- und Fitness-Programm um die Muskeln aufzuwärmen und für die kommenden 1,5 Stunde vorzubereiten.<br>

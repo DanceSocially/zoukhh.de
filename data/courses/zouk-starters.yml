@@ -4,6 +4,7 @@ time: "19:00"
 end_time: "20:00"
 location: "Wandsbeker Chaussee 62A"
 order: 1
+course: true
 body: >-
   Der Kurs findet immer Dienstags um 19:00-20:00 Uhr in der Wandsbeker Chaussee 62a statt (Nähe U-Bahn Station Wartenau).
   Anschließend könnt ihr gerne noch 20 min an dem Aufwärm- und Fitness-Programm des Fortgeschrittenen Kurses teilnehmen.
