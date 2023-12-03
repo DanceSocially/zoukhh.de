@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   margin-bottom: 30px;
 
-  @media (max-width: $screen-xs-min) {
+  @media (max-width: $screen-xs-max) {
     flex-direction: column;
   }
 }

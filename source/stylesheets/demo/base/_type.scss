@@ -2,11 +2,15 @@
 // Typography
 // --------------------------------------------------
 
-
 // Headings
 // -------------------------
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
@@ -20,7 +24,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-top: $line-height-computed;
   margin-bottom: ($line-height-computed / 2);
 
@@ -39,13 +45,24 @@ h6 {
   }
 }
 
-h1 { font-size: $font-size-h1; }
-h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; }
-h4 { font-size: $font-size-h4; }
-h5 { font-size: $font-size-h5; }
-h6 { font-size: $font-size-h6; }
-
+h1 {
+  font-size: $font-size-h1;
+}
+h2 {
+  font-size: $font-size-h2;
+}
+h3 {
+  font-size: $font-size-h3;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+}
+h6 {
+  font-size: $font-size-h6;
+}
 
 // Body text
 // -------------------------
@@ -65,7 +82,6 @@ p {
   }
 }
 
-
 // Emphasis & misc
 // -------------------------
 
@@ -75,10 +91,9 @@ small {
 }
 
 mark {
-  padding: .2em;
+  padding: 0.2em;
   background-color: $state-warning-bg;
 }
-
 
 // Lists
 // -------------------------
@@ -105,7 +120,6 @@ ol {
 .list-unstyled {
   @include list-unstyled;
 }
-
 
 // Inline turns list items into inline-block
 .list-inline {
@@ -159,7 +173,6 @@ dd {
   }
 }
 
-
 // Misc
 // -------------------------
 
@@ -169,7 +182,6 @@ abbr[title],
 abbr[data-original-title] {
   cursor: help;
 }
-
 
 // Blockquotes
 blockquote {
@@ -200,7 +212,6 @@ blockquote {
     }
   }
 }
-
 
 // Addresses
 address {

@@ -3,10 +3,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: $text-color;
+  font-size: 18px;
 }
 
 p {
-  font-size: 18px;
   line-height: 28px;
 }
 
@@ -49,15 +49,14 @@ h2.section-header {
 
 @media screen and (max-width: $screen-xs-max) {
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   p {
-    font-size: 1.4rem;
     line-height: 1.5;
   }
 }
