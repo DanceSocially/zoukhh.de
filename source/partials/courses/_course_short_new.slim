@@ -1,0 +1,23 @@
+= if course.day.presence
+  .course-short.course-short--new
+    .day-time
+      span.day = course.day.slice(0,2)
+      span.time = course.time
+
+    .content
+      h3
+        a href="/termine/##{course.day}-#{course.time}" = course.title
+        .teached-by 
+          span Unterrichtet von: 
+          strong= course.teacher
+
+      .time
+        = "#{course.day} um #{course.time} Uhr"
+
+      - if course.starts_at.present?
+        .starts_at
+          - if course.starts_at > Time.now
+            = "Beginnt am "
+          - else
+            = "Startete am "
+          = "#{course.starts_at.strftime('%d.%m.%Y')}"

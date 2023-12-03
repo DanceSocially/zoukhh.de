@@ -21,10 +21,20 @@ section.hero style=background_image(image_path("/images/dates-hero.jpg"))
 section.courses
   .container
     .row
+      h1 Neues Kursprogram <strong>ab 2024</strong>
+      p.header-note
+        em Alle Kurse finden in der Wandsbeker Chaussee 62a statt (Nähe U-Bahn Station Wartenau).
+      //sort by newest product
+      - data.courses.values.filter{|course| course.new_program}.sort_by{ |course| pp "#{course.title} - #{course.order}"; course.order }.each do | course |
+
+        //to get the actual data:
+        = partial 'partials/courses/course_new', locals: {course: course}
+
+    .row
       h1 Aktuelle Kurse bei Kim und Alina
       //product is structured: ['filename', 'data']
       //sort by newest product
-      - data.courses.filter{|_,course| course.course}.sort{ |_, course| course[1].order }.each do | course |
+      - data.courses.filter{|_,course| course.course && !course.new_program}.sort{ |_, course| course[1].order }.each do | course |
 
         //to get the actual data:
         = partial 'partials/courses/course', locals: {course: course[1]}

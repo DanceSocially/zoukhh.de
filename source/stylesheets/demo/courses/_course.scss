@@ -18,6 +18,24 @@
       line-height: 62px;
     }
   }
+
+  &--new {
+    header {
+      .teached-by {
+        font-size: 2rem;
+      }
+      h1 {
+        font-size: 2.75rem;
+        font-weight: 600;
+        margin: -2px 0 0 0;
+      }
+    }
+  }
+
+  .course-detail__time,
+  .body {
+    margin-left: 6rem;
+  }
 }
 
 .course-detail__time,

@@ -1,0 +1,42 @@
+= if course.day.presence
+  .course-detail.course-detail--new
+    article.content
+      .meta
+        a id="#{course.day}-#{course.time}"
+        header name="#{course.day}-#{course.time}"
+          .day-time
+            span.day = (course.day || '').slice(0,2)
+            span.time = course.time
+
+          div 
+            h1 = course.title
+            .teached-by 
+              span Unterrichtet von: 
+              strong= course.teacher
+
+        - unless course.once_at.present?
+          .course-detail__time
+            - if course.end_time.nil?
+              = "#{course.day} um #{course.time} Uhr"
+            - else
+              = "#{course.day} von #{course.time} bis #{course.end_time} Uhr"
+
+        - if course.starts_at.present?
+          - if course.starts_at > Time.now
+            .course-detail__starts_at = "Beginnt am #{course.starts_at.strftime('%d.%m.%Y')}"
+          - else
+            .course-detail__starts_at = "Begann am #{course.starts_at.strftime('%d.%m.%Y')}"
+        - if course.once_at.present?
+          .course-detail__time
+            = "Einmalig am "
+            = "#{Date.parse(course.once_at).strftime('%d.%m.%Y')} um #{course.time} Uhr"
+
+      .body
+        = markdown course.body
+
+      - if course.fblink.present?
+        a href=course.fblink rel="noopener noreferrer nofollow" Link zum Facebook-Event
+
+      - if course.flyer
+        .flyer
+          img[src=image_path(course.flyer) width=1140]

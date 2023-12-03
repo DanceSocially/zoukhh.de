@@ -19,9 +19,15 @@ section.hero style=background_image(image_path(data.pages.home.hero.image))
 section.homepage-courses.courses
   .container
     h2.section-header
+      | Aktuelle Kurse ab 2024
+    .course-short-list
+      - data.courses.values.filter{|course| course.course && course.new_program}.sort_by{ |course| course.order }.each do | course |
+        = partial 'partials/courses/course_short_new', locals: {course: course}
+
+    h2.section-header
       | Aktuelle Kurse bei Kim und Alina
     .course-short-list
-      - data.courses.filter{|_,course| course.course}.sort{ |_, course| course[1].order }.each do | course |
+      - data.courses.filter{|_,course| course.course && !course.new_program}.sort{ |_, course| course[1].order }.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
 
     h2.section-header
@@ -30,7 +36,13 @@ section.homepage-courses.courses
       - data.courses.reject{|_,course| course.course}.sort{ |_, course| course[1].order }.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
 
-- if data.spotlight.reject{ |name, c| c.hidden }.length > 0
+section.flyers
+  .container
+    - pp data.settings
+    - data.settings.flyers.each do |flyer|
+      img[src=image_path(flyer.src)]
+
+- if data.spotlight.reject{ |name, c| c.hidden }.length > 0 && false
   section.homepage-courses.courses
     .container
       h2.section-header.mt-0
