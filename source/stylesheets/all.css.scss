@@ -57,3 +57,22 @@
 .mt-0 {
   margin-top: 0;
 }
+
+.flyers-progress {
+  background: #ccc;
+}
+
+.flyers-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}
+
+.flyers .container {
+  text-align: center;
+}
+
+.flyers img {
+  max-width: 860px;
+}
