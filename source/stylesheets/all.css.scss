@@ -73,6 +73,14 @@
   text-align: center;
 }
 
-.flyers img {
+.flyers img,
+.img.max-width {
   max-width: 860px;
+}
+
+@media screen and (max-width: $screen-sm-min) {
+  .flyers img,
+  img.max-width {
+    max-width: 100%;
+  }
 }

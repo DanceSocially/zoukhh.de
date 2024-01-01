@@ -36,10 +36,6 @@ section.homepage-courses.courses
       - data.courses.reject{|_,course| course.course}.sort{ |_, course| course[1].order }.each do | course |
         = partial 'partials/courses/course_short', locals: {course: course[1]}
 
-section.flyers
-  .container
-    img[src=image_path(data.settings.flyers[0].src)]
-
 - if data.spotlight.reject{ |name, c| c.hidden }.length > 0
   section.homepage-courses.courses
     .container
@@ -49,3 +45,6 @@ section.flyers
         - data.spotlight.each do | course |
           = partial 'partials/courses/course', locals: {course: course[1]} unless course[1].hidden
 
+section.flyers
+  .container
+    img[src=image_path(data.settings.flyers[0].src)]
