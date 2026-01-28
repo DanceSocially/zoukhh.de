@@ -75,7 +75,7 @@ helpers do
   end
 
   def markdown(content)
-    Tilt['markdown'].new { content }.render
+    Kramdown::Document.new(content).to_html
   end
 end
 
