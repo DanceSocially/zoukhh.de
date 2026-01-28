@@ -39,6 +39,7 @@ section.homepage-courses.courses
         - data.spotlight.each do | course |
           = partial 'partials/courses/course', locals: {course: course[1]} unless course[1].hidden
 
-section.flyers
-  .container
-    img[src=image_path(data.settings.flyers[1].src)]
+- if false
+  section.flyers
+    .container
+      img[src=image_path(data.settings.flyers[1].src)]
