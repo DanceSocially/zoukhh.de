@@ -2,6 +2,5 @@ nav_items:
   - { label: "Home", path: "/" }
   - { label: "Termine", path: "/termine/" }
   - { label: "Was ist Zouk?", path: "/zouk/" }
-  - { label: "Das sind wir", path: "/das-sind-wir/" }
   - { label: "Musik", path: "/musik/" }
   - { label: "FAQ", path: "/faq/" }

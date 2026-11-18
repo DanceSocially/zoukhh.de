@@ -2,11 +2,12 @@
   .course-short.course-short--new
     .day-time
       span.day = course.day.slice(0,2)
-      span.time = course.time
+      - if course.time.present?
+        span.time = course.time
 
     .content
       h3
-        a href="/termine/##{course.day}-#{course.time}" = course.title
+        a target="_blank" href="/termine/##{course.day}-#{course.time}" = course.title
         .teached-by 
           span Unterrichtet von: 
           strong= course.teacher

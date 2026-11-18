@@ -43,17 +43,6 @@ end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-# proxy people.yml files to person.html
-data.people.each do |_filename, person|
-  # people is an array: [filename, {data}]
-  proxy(
-    "/das-sind-wir/#{person[:name].parameterize}/index.html",
-    'person.html',
-    locals: { person: person },
-    # layout: 'person-detail',
-    ignore: true
-  )
-end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
