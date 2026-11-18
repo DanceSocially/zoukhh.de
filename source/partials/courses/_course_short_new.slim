@@ -7,7 +7,10 @@
 
     .content
       h3
-        a target="_blank" href="/termine/##{course.day}-#{course.time}" = course.title
+        - if course.website.present?
+          a target="_blank" href="#{course.website}" = course.title
+        - else
+          a target="_blank" href="/termine/##{course.day}-#{course.time}" = course.title
         .teached-by 
           span Unterrichtet von: 
           strong= course.teacher
